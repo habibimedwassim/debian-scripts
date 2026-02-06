@@ -1,23 +1,48 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
-./base/system.sh
-./base/firmware.sh
-./base/fonts.sh
-./base/hardware-utils.sh
+GITHUB_BASE="https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main"
 
-./desktop/graphics-mesa.sh
-./desktop/audio-pipewire.sh
-./desktop/flatpak.sh
-./desktop/zram.sh
-./desktop/sysctl.sh
+# Helper to run remote scripts
+run_remote() {
+    local url="$1"
+    echo "Running $url..."
+    bash -c "$(curl -fsSL "$url")"
+}
 
-./kernel/liquorix.sh
-./hardware/nvidia.sh
+### --------------------------------------------------
+### Base
+### --------------------------------------------------
+run_remote "$GITHUB_BASE/base/system.sh"
+run_remote "$GITHUB_BASE/base/firmware.sh"
+run_remote "$GITHUB_BASE/base/fonts.sh"
+run_remote "$GITHUB_BASE/base/hardware-utils.sh"
 
-./profiles/gaming-meta.sh
-./profiles/gaming-applications.sh
-./profiles/install-heroic.sh
-./profiles/install-github-desktop.sh
+### --------------------------------------------------
+### Desktop
+### --------------------------------------------------
+run_remote "$GITHUB_BASE/desktop/graphics-mesa.sh"
+run_remote "$GITHUB_BASE/desktop/audio-pipewire.sh"
+run_remote "$GITHUB_BASE/desktop/flatpak.sh"
+run_remote "$GITHUB_BASE/desktop/zram.sh"
+run_remote "$GITHUB_BASE/desktop/sysctl.sh"
+
+### --------------------------------------------------
+### Kernel
+### --------------------------------------------------
+run_remote "$GITHUB_BASE/kernel/liquorix.sh"
+
+### --------------------------------------------------
+### Hardware
+### --------------------------------------------------
+run_remote "$GITHUB_BASE/hardware/nvidia.sh"
+
+### --------------------------------------------------
+### Profiles
+### --------------------------------------------------
+run_remote "$GITHUB_BASE/profiles/gaming-meta.sh"
+run_remote "$GITHUB_BASE/profiles/gaming-applications.sh"
+run_remote "$GITHUB_BASE/profiles/install-heroic.sh"
+run_remote "$GITHUB_BASE/profiles/install-github-desktop.sh"
 
 echo "All done. Reboot recommended."
