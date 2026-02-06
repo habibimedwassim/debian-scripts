@@ -15,16 +15,13 @@ run_remote() {
 ### --------------------------------------------------
 run_remote "$GITHUB_BASE/base/system.sh"
 run_remote "$GITHUB_BASE/base/firmware.sh"
-run_remote "$GITHUB_BASE/base/fonts.sh"
-run_remote "$GITHUB_BASE/base/hardware-utils.sh"
 
 ### --------------------------------------------------
 ### Desktop
 ### --------------------------------------------------
 run_remote "$GITHUB_BASE/desktop/graphics-mesa.sh"
 run_remote "$GITHUB_BASE/desktop/audio-pipewire.sh"
-run_remote "$GITHUB_BASE/desktop/flatpak.sh"
-run_remote "$GITHUB_BASE/desktop/zram.sh"
+run_remote "$GITHUB_BASE/desktop/kde-flatpak.sh"
 run_remote "$GITHUB_BASE/desktop/sysctl.sh"
 
 ### --------------------------------------------------
@@ -35,7 +32,7 @@ run_remote "$GITHUB_BASE/kernel/liquorix.sh"
 ### --------------------------------------------------
 ### Hardware
 ### --------------------------------------------------
-run_remote "$GITHUB_BASE/hardware/nvidia.sh"
+run_remote "$GITHUB_BASE/hardware/nvidia-open.sh"
 
 ### --------------------------------------------------
 ### Profiles
