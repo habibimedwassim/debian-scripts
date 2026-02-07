@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [ -t 0 ] || [ -t 1 ]; then
-    exec </dev/tty
-fi
-
 GITHUB_BASE="https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main"
-
-read_choice() {
-    local var="$1"
-    local prompt="$2"
-    IFS= read -r -p "$prompt" "$var" </dev/tty || true
-}
 
 run_remote() {
     local path="$1"
