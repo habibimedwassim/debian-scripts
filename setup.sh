@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
-exec </dev/tty
+
+if [ -t 0 ] || [ -t 1 ]; then
+    exec </dev/tty
+fi
+
 GITHUB_BASE="https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main"
 
 read_choice() {
