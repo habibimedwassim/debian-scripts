@@ -73,7 +73,7 @@ Profiles are opt-in.
 
 Interactive setup:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main/setup.sh | bash
+bash <(curl -fsSL https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main/setup.sh)
 ```
 
 Run a single script remotely:
