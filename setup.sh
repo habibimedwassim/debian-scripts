@@ -111,6 +111,8 @@ while true; do
             run_remote "desktop/audio-pipewire.sh"
             flatpak_menu
             run_remote "desktop/sysctl.sh"
+            run_remote "desktop/zram.sh"
+            run_remote "desktop/utils.sh"
             pause
             ;;
         3)
