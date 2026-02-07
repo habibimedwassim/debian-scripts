@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
-sudo apt install -y \
-  flatpak \
-  plasma-discover-backend-flatpak
+echo "Setting up Flatpak for KDE Plasma"
 
-sudo flatpak remote-add --if-not-exists flathub \
-  https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install -y \
+  plasma-discover-backend-flatpak \
+  xdg-desktop-portal \
+  xdg-desktop-portal-kde
