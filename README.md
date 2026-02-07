@@ -72,20 +72,22 @@ Profiles are opt-in.
 ## Usage
 
 Interactive setup:
-
+```bash
 curl -fsSL https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main/setup.sh | bash
+```
 
 Run a single script remotely:
-
+```bash
 curl -fsSL https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main/profiles/gaming-meta.sh | bash
+```
 
 Local execution (recommended):
-
+```bash
 git clone https://github.com/habibimedwassim/debian-scripts.git
 cd debian-scripts
 chmod +x **/*.sh
 ./setup.sh
-
+```
 ## Assumptions
 
 - Debian-based system (Debian 13)
