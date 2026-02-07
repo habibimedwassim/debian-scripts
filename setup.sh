@@ -52,7 +52,7 @@ nvidia_menu() {
 
     case "$n" in
         1) run_remote "hardware/nvidia-open.sh" ;;
-        2) run_remote "hardware/cuda-drivers.sh" ;;
+        2) run_remote "hardware/nvidia-cuda.sh" ;;
         0) return ;;
         *) echo "Invalid choice"; sleep 1 ;;
     esac
