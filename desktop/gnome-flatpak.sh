@@ -7,3 +7,6 @@ sudo apt install -y \
   gnome-software-plugin-flatpak \
   xdg-desktop-portal \
   xdg-desktop-portal-gnome
+
+flatpak remote-add --if-not-exists flathub \
+  https://flathub.org/repo/flathub.flatpakrepo

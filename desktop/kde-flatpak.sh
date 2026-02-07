@@ -7,3 +7,6 @@ sudo apt install -y \
   plasma-discover-backend-flatpak \
   xdg-desktop-portal \
   xdg-desktop-portal-kde
+
+flatpak remote-add --if-not-exists flathub \
+  https://flathub.org/repo/flathub.flatpakrepo
