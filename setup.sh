@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-
+exec </dev/tty
 GITHUB_BASE="https://raw.githubusercontent.com/habibimedwassim/debian-scripts/main"
 
 run_remote() {
