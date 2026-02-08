@@ -18,6 +18,7 @@ sudo apt install -y \
 sudo usermod -aG audio,video,disk,adm,i2c "$USER"
 
 mkdir -p ~/.config/wireplumber/wireplumber.conf.d/
+mkdir -p ~/.config/pipewire/pipewire.conf.d/
 
 cat > ~/.config/wireplumber/wireplumber.conf.d/51-disable-suspend.conf << 'EOF'
 monitor.alsa.rules = [
@@ -32,6 +33,16 @@ monitor.alsa.rules = [
     }
   }
 ]
+EOF
+
+cat > ~/.config/pipewire/pipewire.conf.d/99-low-latency.conf << 'EOF'
+context.properties = {
+  default.clock.rate = 48000
+  default.clock.allowed-rates = [ 44100 48000 ]
+  default.clock.quantum = 512
+  default.clock.min-quantum = 512
+  default.clock.max-quantum = 512
+}
 EOF
 
 systemctl --user enable --now pipewire wireplumber
