@@ -105,6 +105,7 @@ while true; do
             run_remote "base/system.sh"
             run_remote "base/firmware.sh"
             run_remote "base/firewall.sh"
+            run_remote "base/fonts.sh"
             pause
             ;;
         2)

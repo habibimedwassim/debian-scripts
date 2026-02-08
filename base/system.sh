@@ -23,10 +23,6 @@ sudo apt install -y \
   extrepo
 
 sudo apt install -y \
-  fonts-inter* \
-  fonts-noto*
-
-sudo apt install -y \
   nvme-cli \
   smartmontools \
   pciutils \
