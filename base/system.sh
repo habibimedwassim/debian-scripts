@@ -16,10 +16,11 @@ sudo apt install -y \
   unzip \
   p7zip-full \
   ffmpeg \
-  vim \
   build-essential \
   pkg-config \
   systemd-zram-generator \
+  cabextract \
+  zenity \
   extrepo
 
 sudo apt install -y \
@@ -27,6 +28,13 @@ sudo apt install -y \
   smartmontools \
   pciutils \
   usbutils
+  
+sudo apt install -y \
+  libgtk-4-dev \
+  libadwaita-1-dev \
+  libjsoncpp-dev \
+  libzip-dev \
+  librsvg2-dev
 
 sudo extrepo enable winehq
 

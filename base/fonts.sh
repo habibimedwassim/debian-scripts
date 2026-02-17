@@ -5,6 +5,9 @@ CONF_FILE="/etc/fonts/local.conf"
 
 echo "Installing Fonts..."
 sudo apt install -y \
+  fonts-liberation \
+  fonts-liberation2 \
+  fonts-cantarell \
   fonts-inter* \
   fonts-noto*
 

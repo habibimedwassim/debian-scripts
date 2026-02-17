@@ -8,4 +8,5 @@ sudo apt install -y \
   firmware-iwlwifi \
   firmware-realtek \
   firmware-mediatek \
+  firmware-sof-signed \
   intel-microcode
