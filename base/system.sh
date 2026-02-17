@@ -8,6 +8,16 @@ sudo dpkg --add-architecture i386
 sudo apt update
 
 sudo apt install -y \
+  firmware-linux \
+  firmware-linux-nonfree \
+  firmware-misc-nonfree \
+  firmware-iwlwifi \
+  firmware-realtek \
+  firmware-mediatek \
+  firmware-sof-signed \
+  intel-microcode
+
+sudo apt install -y \
   git \
   gzip \
   cmake \
