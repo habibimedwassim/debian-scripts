@@ -36,11 +36,14 @@ monitor.alsa.rules = [
 EOF
 
 cat > ~/.config/pipewire/pipewire.conf.d/99-low-latency.conf << 'EOF'
+# Gaming Audio Profile
+# Optimized for low-latency gaming audio with good quality
+
 context.properties = {
   default.clock.rate = 48000
-  default.clock.allowed-rates = [ 44100 48000 ]
-  default.clock.quantum = 512
-  default.clock.min-quantum = 512
+  default.clock.allowed-rates = [ 44100 48000 96000 ]
+  default.clock.quantum = 256
+  default.clock.min-quantum = 64
   default.clock.max-quantum = 512
 }
 EOF
