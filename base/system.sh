@@ -29,8 +29,6 @@ sudo apt install -y \
   usbutils
 
 sudo extrepo enable winehq
-sudo extrepo enable deb-multimedia
 
 sudo apt update
-sudo apt dist-upgrade -y
 sudo apt autoremove -y
