@@ -13,8 +13,9 @@ sudo apt upgrade -y
 
 sudo apt install -y \
   nvidia-open \
-  nvidia-vaapi-driver \
-  vulkan-tools \
-  vulkan-validationlayers \
   libnvidia-encode1 \
   libnvidia-fbc1
+
+sudo tee /etc/environment.d/90-nvidia-gl.conf > /dev/null << 'EOF'
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+EOF
